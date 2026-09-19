@@ -26,5 +26,16 @@ echo "Hola mundo!";
         <p>Este es un párrafo</p>
         
     </div>
+
+    <div class="seccion">
+        <h2>Título del párrafo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda exercitationem excepturi fugit delectus possimus laborum nisi asperiores iste voluptatem voluptates, consequatur dolorum corrupti necessitatibus quia ex voluptate aspernatur in.</p>
+    </div>
+
+    <div class="seccion2">
+        <h2>Título del párrafo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda exercitationem excepturi fugit delectus possimus laborum nisi asperiores iste voluptatem voluptates, consequatur dolorum corrupti necessitatibus quia ex voluptate aspernatur in.</p>
+    </div>
+
 </body>
 </html>

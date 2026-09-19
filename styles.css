@@ -1,9 +1,22 @@
-h1
+.seccion
 {
-    color: #167c84;
+    background-color: greenyellow;
+    padding: 20px 40px; /* padding: arriba/abajo derecha/izquierda */
+    margin: 20px 0px 20px 0px;
+
+    border: 10px hidden black;
 }
 
-div
+.seccion2
 {
-    background-color: #2c1684;
+    background-color: red;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 30px;
+    margin-bottom: 40px;
 }
