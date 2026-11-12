@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            /* display: flex;
+            flex-direction: column; */
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        .card,
+        .card-larga {
+            width: 250px;
+        }
+
+        .card-larga {
+            grid-column: 3;
+            grid-row: span 3;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="card" style="background-color: teal">
+            <h1>Lo que sea</h1>
+        </div>
+        <div class="card" style="background-color: teal">
+            <h1>Lo que sea</h1>
+        </div>
+        <div class="card-larga" style="background-color: teal">
+            <h1>Lo que sea</h1>
+            <img src="image.png" alt="Descripción">
+        </div>
+        <div class="card" style="background-color: green">
+            <h1>Otra cosa</h1>
+        </div>
+        <div class="card" style="background-color: green">
+            <h1>Otra cosa</h1>
+        </div>
+        <div class="card" style="background-color: green">
+            <h1>Otra cosa</h1>
+        </div>
+        <div class="card" style="background-color: green">
+            <h1>Otra cosa</h1>
+        </div>
+    </div>
+</body>
+
+</html>
