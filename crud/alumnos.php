@@ -43,7 +43,8 @@ if (!$query)
                         <td><?php echo $row["apellido_p"]?></td>
                         <td><?php echo $row["apellido_m"]?></td>
                         <td><?php echo $row["edad"]?></td>
-                        <td><?php /* echo $row[""] */?></td>
+                        <td><a href="eliminar.php?id=<?php echo $row["id_alumno"] ?>">Eliminar</a></td>
+                        <td><a href="editar.php?id=<?php echo $row['id_alumno'] ?>">Editar</a></td>
                     </tr>
                     <?php
                     }
