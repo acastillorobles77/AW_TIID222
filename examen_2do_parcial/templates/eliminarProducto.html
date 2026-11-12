@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Eliminar producto</title>
+</head>
+
+<body>
+    <h1>Eliminar producto</h1>
+    <form action="/eliminar/{{producto.0}}" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{producto.1}}" readonly required>
+        <br>
+        <label>Descripción:</label>
+        <input type="text" name="descripcion" value="{{producto.2}}" readonly required>
+        <br>
+        <label>Precio:</label>
+        <input type="number" name="precio" value="{{producto.3}}" readonly required>
+        <br>
+        <label>Stock:</label>
+        <input type="number" name="stock" value="{{producto.4}}" readonly required>
+        <br>
+        <button type="submit" onclick="return Eliminar()">Eliminar</button>
+        <button onclick="return Regresar()">Regresar</button>
+    </form>
+
+    <script>
+        function Eliminar() {
+            return confirm("Estás seguro de que deseas eliminar este producto?");
+        }
+
+        function Regresar() {
+            window.location.href = "{{ url_for('index') }}";
+        }
+    </script>
+</body>
+
+</html>

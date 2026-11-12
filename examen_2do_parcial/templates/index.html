@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Examen 2do parcial</title>
+</head>
+
+<body>
+    <h1 class="text-4xl font-bold text-base-content">Gestión papelería</h1>
+
+    {% with mensajes = get_flashed_messages() %}
+    {% if mensajes %}
+    {% for msj in mensajes %}
+    <h3 class="text-2xl font-bold text-base-content">{{msj}}</h3>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form action="/guardar" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <label>Descripción:</label>
+        <input type="text" name="descripcion" required>
+        <br>
+        <label>Precio:</label>
+        <input type="number" name="precio" required>
+        <br>
+        <label>Stock:</label>
+        <input type="number" name="stock" required>
+        <br>
+        <input type="submit" value="Guardar producto" class="btn btn-primary">
+    </form>
+
+    <br>
+    <h1 class="text-4xl font-bold text-base-content">Productos guardados</h1>
+    <table border="1" class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in listaProductos %}
+            <tr>
+                <td>{{producto.1}}</td>
+                <td>{{producto.2}}</td>
+                <td>{{producto.3}}</td>
+                <td>{{producto.4}}</td>
+                <td>
+                    <a href="/editar/{{producto.0}}"><button class="btn btn-outline btn-accent">Editar</button></a>
+                    <a href="/eliminar/{{producto.0}}"><button class="btn btn-outline btn-error">Eliminar</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
