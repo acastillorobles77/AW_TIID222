@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'nav_footer.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
-</head>
+{% block content %}
 
-<body>
-    <h2>Panel de Administrador</h2>
-    <p>Bienvenido, {{ session["nombre"] }}</p>
-    <a href="/logout">Cerrar sesión</a>
-</body>
+<div class="p-10">
+    <h1 class="text-3xl font-bold">Panel de Administrador</h1>
+    <p class="mt-4">Bienvenido, {{ session["nombre"] }}</p>
+</div>
 
-</html>
+{% endblock %}
