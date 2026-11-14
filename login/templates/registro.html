@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Registro</title>
+</head>
+
+<body>
+    <h1 class="text-4xl font-bold text-base-content">Formulario de registro</h1>
+    <form action="/registro" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <label>Apellido paterno:</label>
+        <input type="text" name="apellido_p" required>
+        <br>
+        <label>Apellido materno:</label>
+        <input type="text" name="apellido_m" required>
+        <br>
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo" required>
+        <br>
+        <label>Contraseña:</label>
+        <input type="password" name="contraseña" required>
+        <br>
+        <label for="id_rol">Rol: </label>
+        <select name="id_rol" id="id_rol">
+            <option value="1">Administrador</option>
+            <option value="2">Usuario</option>
+        </select>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Registrarse">
+    </form>
+    <a href="{{ url_for('home') }}"><button class="btn btn-accent">Regresar al login</button></a>
+</body>
+
+</html>
